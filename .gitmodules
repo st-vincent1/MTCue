@@ -1,0 +1,6 @@
+[submodule "cxt2vec"]
+	path = cxt2vec
+	url = https://github.com/st-vincent1/cxt2vec
+[submodule "fairseq"]
+	path = fairseq
+	url = https://github.com/facebookresearch/fairseq
