@@ -19,7 +19,13 @@ To install the code in this repository, please follow these steps:
    git clone --recurse-submodules https://github.com/st-vincent1/MTCue.git
    ```
    
-2. Install the required dependencies. We recommend using a virtual environment. If you are using [Python], you can create a virtual environment using [venv](https://docs.python.org/3/tutorial/venv.html) or [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Activate the virtual environment and install the required packages using the following command:
+2. Install the required dependencies. We recommend using a virtual environment. If you are using Python, you can create a virtual environment using [venv](https://docs.python.org/3/tutorial/venv.html) or [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). For example, creating a Conda environment with Python 3.10 uses the command below:
+
+   ```bash
+   conda create --name mtcue --python=3.10
+   ```
+   
+4. Activate the virtual environment and install the required packages using the following command:
 
    ```bash
    conda install -c conda-forge gxx_linux-64
