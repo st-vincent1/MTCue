@@ -17,25 +17,28 @@ To install the code in this repository, please follow these steps:
 
    ```bash
    git clone --recurse-submodules https://github.com/st-vincent1/MTCue.git
+   cd MTCue
    ```
    
-2. Install the required dependencies. We recommend using a virtual environment. If you are using Python, you can create a virtual environment using [venv](https://docs.python.org/3/tutorial/venv.html) or [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). For example, creating a Conda environment with Python 3.10 uses the command below:
+2. Install the required dependencies. We recommend using a virtual environment. If you are using Python, you can create a virtual environment using [venv](https://docs.python.org/3/tutorial/venv.html) or [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). For example, creating and activating a Conda environment with Python 3.10 uses the commands below:
 
    ```bash
-   conda create --name mtcue --python=3.10
+   conda create --name mtcue --python=3.10 -y
+   conda activate mtcue
    ```
    
 4. Activate the virtual environment and install the required packages using the following command:
 
    ```bash
-   conda install -c conda-forge gxx_linux-64
+   conda install -c conda-forge gxx_linux-64 -y
+   conda upgrade -c conda-forge --all -y
    pip install --editable fairseq
    pip install einops sacrebleu sentence-transformers
    ```
 
 ## Preparing data
 
-The datasets can be downloaded under this link: ` `. Once downloaded, please unpack the `.zip` to `/path/to/this/repo/data`. To make data binaries necessary to train/evaluate the models, run
+The datasets can be downloaded under this link: _to be added by 7/7/23_. Once downloaded, please unpack the `.zip` to `/path/to/this/repo/data`. To make data binaries necessary to train/evaluate the models, run
 
 ```bash
 bash scripts/mtcue/prepare.sh --src <source language> --tgt <target language>
