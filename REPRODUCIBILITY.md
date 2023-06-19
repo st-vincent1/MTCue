@@ -8,11 +8,13 @@ To train or evaluate models for a specific language pair, replace `[SRC]` and `[
 
 ### Dataset
 
-To reproduce the experiments, download the OpenSubtitles18 dataset from [link to dataset] and extract it to the `data/` directory.
+To reproduce the experiments, extract the OpenSubtitles18 dataset following the instructions in [this repo](https://github.com/st-vincent1/opensubtitles_parser), then move the relevant directories to the `data/` directory under this repo.
+
+**Note**: To extract the film metadata for training, you will need to provide an API key for [the OMDb API](https://www.patreon.com/join/omdb). You can obtain one by becoming a Patron with a [Basic subscription bought here](https://www.patreon.com/join/omdb). 
 
 ### Checkpoints
 
-Unpack the relevant checkpoints to the `checkpoints/` directory.
+The checkpoints for MTCue can be downloaded under the following link (TBA before 7 July 2023). Unpack the relevant checkpoints to the `checkpoints/` directory.
 
 ### Evaluation
 
@@ -24,8 +26,9 @@ bash scripts/mtcue/evaluate.sh --src [SRC] --tgt [TGT] --model [tagging/novotney
 
 ### Results
 
-The results should match Table 3 in the paper.
+The results should match Table 4 in the paper:
 
+![image](https://github.com/st-vincent1/MTCue/assets/19303946/9808ae0e-19a6-4b99-a9c3-85e80e501404)
 
 ## EAMT22 English-to-Polish multi-attribute control task
 
@@ -69,7 +72,10 @@ You can specify the path to the test set and other evaluation parameters using c
 
 ### Results
 
-[Insert a summary of the results for Experiment 2 here]
+The results should match the following figure (Figure 4 in the paper):
+
+![image](https://github.com/st-vincent1/MTCue/assets/19303946/e7fd9c95-15c4-49fc-b502-758809746a7a)
+
 
 
 ## IWSLT22 Formality control task (English-to-German, English-to-Russian)
@@ -95,7 +101,9 @@ bash scripts/testsets/formality.sh --lang [de/ru] --arch mtcue
 
 ### Results
 
-[Insert a summary of the results for Experiment 2 here]
+The results should match the table below (Table 5 in the paper):
+
+<img src="https://github.com/st-vincent1/MTCue/assets/19303946/f0ef4591-4dd9-414a-93e9-4eaedaeba20c" width="480">
 
 
 ## Citation
@@ -116,4 +124,4 @@ If you use this code in your research, please cite our paper:
 
 ## Contact
 
-If you have any questions or issues with the code, please contact [Insert contact information here].
+If you have any questions or issues with the code, please contact me at `stvincent1@sheffield.ac.uk` or alternatively raise an Issue/make a Pull Request within this repository.
