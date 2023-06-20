@@ -30,54 +30,6 @@ The results should match Table 4 in the paper:
 
 ![image](https://github.com/st-vincent1/MTCue/assets/19303946/9808ae0e-19a6-4b99-a9c3-85e80e501404)
 
-## EAMT22 English-to-Polish multi-attribute control task
-
-### Dataset
-
-To reproduce the experiments for the EAMT22 task, download the EAMT22 dataset from [link to dataset] and extract it to the `data/en-pl/eamt22/` directory.
-
-### Checkpoints
-
-The relevant checkpoints are located under `en-pl/eamt22/checkpoints/`. Unpack them to `checkpoints/`.
-
-### Evaluation
-
-To evaluate the model for the EAMT22 task, run the following command:
-
-```bash
-bash scripts/testsets/eamt/evaluate.sh --n [0/1/5/30/300/3000/30000/max] --model mtcue
-```
-`n=0` corresponds to the zero-shot scenario.
-
-The above script will generate hypotheses under `data/hypotheses/` and calculate BLEU.
-
-To obtain the accuracy scores, follow the instructions below to install the evaluation tool.
-
-#### Installing the evaluation tool
-
-1. Download the Morfeusz model:
-```bash
-wget http://zil.ipipan.waw.pl/SpacyPL?action=AttachFile&do=get&target=pl_spacy_model_morfeusz_big-0.1.0.tar.gz
-```
-2. Install spacy via `pip install spacy=2.2.4`
-
-#### Running the evaluation tool 
-
-To run the evaluation tool, run the following command:
-```bash
-python eamt_annotation_tool/eamt22_evaluate.py --hyp data/hypotheses/eamt.eamt22.[n].mtcue/test.hyp
-```
-
-You can specify the path to the test set and other evaluation parameters using command-line arguments or a configuration file.
-
-### Results
-
-The results should match the following figure (Figure 4 in the paper):
-
-![image](https://github.com/st-vincent1/MTCue/assets/19303946/e7fd9c95-15c4-49fc-b502-758809746a7a)
-
-
-
 ## IWSLT22 Formality control task (English-to-German, English-to-Russian)
 
 ### Dataset
