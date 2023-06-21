@@ -14,7 +14,19 @@ To reproduce the experiments, extract the OpenSubtitles18 dataset following the 
 
 ### Checkpoints
 
-The checkpoints for MTCue can be downloaded under the following link (TBA before 7 July 2023). Unpack the relevant checkpoints to the `checkpoints/` directory.
+The checkpoints for MTCue can be downloaded under [this FigShare link](https://figshare.shef.ac.uk/articles/dataset/MTCue_Model_Checkpoints/22956002/1). Checkpoints are sorted by language pair, i.e. checkpoints for English-to-German are located in `en.de.zip`. Unpack the relevant checkpoints to the `checkpoints/` directory:
+1. Navigate to the this repository's path.
+2. Download the checkpoints here or move them here from your download location.
+3. Replace [SRC] and [TGT] with the source and language codes respectively and run:
+```bash
+unzip [SRC].[TGT].zip
+mv [SRC].[TGT]/* checkpoints
+ls checkpoints
+```
+This should yield
+```bash
+(...) baseline.[SRC].[TGT] mtcue.[SRC].[TGT] (...)
+```
 
 ### Evaluation
 
